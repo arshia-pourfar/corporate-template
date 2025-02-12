@@ -1,9 +1,9 @@
-import Navbar from "@/app/components/Navbar";
-import Header from "@/app/components/Header";
-import Services from "@/app/components/Services";
-import SupportCompany from "@/app/components/support-our-company";
-import OurProjects from "./components/Projects";
-import dataSlider from '@/app/data/our-project-data.json';
+import Navbar from "@/ui/layout/Navbar";
+import Header from "@/ui/layout/Header";
+import Services from "@/ui/layout/Services";
+import SupportCompany from "@/ui/layout/support-our-company";
+import OurProjects from "@/ui/layout/Projects";
+import dataSlider from '@/data/our-project-data.json';
 
 export default function Home() {
   return (
@@ -13,7 +13,6 @@ export default function Home() {
       <Services />
       <SupportCompany />
       <OurProjects data={dataSlider}/>
-
     </main>
   );
 }

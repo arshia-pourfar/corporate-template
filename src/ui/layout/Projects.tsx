@@ -1,0 +1,134 @@
+'use client';
+
+import React from "react";
+// import Image from 'next/image'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCards, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import { Compare } from "@/ui/components/compare";
+interface Slide {
+    id: number;
+    username: string;
+    tagline: string;
+    image: string;
+    profileImage: string;
+}
+
+interface DemoSliderProps {
+    data: Slide[];
+}
+
+// const OurProject: React.FC<DemoSliderProps> = ({ data }) => {
+const OurProject: React.FC<DemoSliderProps> = () => {
+    const projectList = [
+        {
+            firstImage: '/images/header-image.jpg',
+            secondImage: '/images/medium-shot-low-angle-view-smiling-engineer.jpg',
+            title: 'Lorem ipsum, dolor',
+            href: '#',
+        },
+        {
+            firstImage: '/images/projects/project-3.jpg',
+            secondImage: '/images/projects/project-1.jpg',
+            title: 'sit amet consectetur',
+            href: '#',
+        },
+        {
+            firstImage: '/images/header-image.jpg',
+            secondImage: '/images/projects/project-2.jpg',
+            title: 'adipisicing elit.',
+            href: '#',
+        },
+        {
+            firstImage: '/images/header-image.jpg',
+            secondImage: '/images/medium-shot-low-angle-view-smiling-engineer.jpg',
+            title: 'Deleniti aspernatur',
+            href: '#',
+        },
+        {
+            firstImage: '/images/projects/project-3.jpg',
+            secondImage: '/images/projects/project-1.jpg',
+            title: 'quidem magnam',
+            href: '#',
+        },
+        {
+            firstImage: '/images/header-image.jpg',
+            secondImage: '/images/projects/project-2.jpg',
+            title: 'repudiandae in eligendi',
+            href: '#',
+        },
+        {
+            firstImage: '/images/header-image.jpg',
+            secondImage: '/images/medium-shot-low-angle-view-smiling-engineer.jpg',
+            title: 'illum enim earum',
+            href: '#',
+        },
+        {
+            firstImage: '/images/projects/project-3.jpg',
+            secondImage: '/images/projects/project-1.jpg',
+            title: 'non cupiditate adipisci',
+            href: '#',
+        },
+        {
+            firstImage: '/images/header-image.jpg',
+            secondImage: '/images/projects/project-2.jpg',
+            title: 'iusto unde molestiae,',
+            href: '#',
+        },
+    ]
+    return (
+        <section className="w-full mt-10 text-center">
+            <h2 className="font-extrabold text-5xl mb-3">Our Projects</h2>
+            <div className="inter-var my-10 relative">
+
+                {/* ////////////////////////////// add icon instead ◀ //////////////////////////////// */}
+                {/* دکمه قبل */}
+                <button className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 p-2 rounded-full">
+                    ◀
+                </button>
+
+                {/* دکمه بعد */}
+                <button className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 p-2 rounded-full">
+                    ▶
+                </button>
+                {/* ////////////////////////////// add icon instead ▶ //////////////////////////////// */}
+
+                <Swiper
+                    modules={[EffectCards, Navigation]}
+                    effect="cards"
+                    navigation={{
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    }}
+                    className="w-[65vw]"
+                >
+                    <div className="relative group/card rounded-xl flex justify-center items-center">
+                        {projectList.map((item, index) => (
+                            <SwiperSlide key={index} className="cursor-grab rounded-xl relative border-4 border-black">
+                                <Compare
+                                    firstImage={item.firstImage}
+                                    secondImage={item.secondImage}
+                                    firstImageClassName="object-cover object-left-top"
+                                    secondImageClassname="object-cover object-left-top"
+                                    className="h-[60vh] w-[65vw]"
+                                    slideMode="hover"
+                                ////////////////////////// mobile setting //////////////////////////
+                                // showHandlebar={false}
+                                // slideMode="drag"
+                                // autoplay={true}
+                                ////////////////////////// mobile setting //////////////////////////
+                                />
+                                <div className="absolute bottom-0 flex justify-center items-center pt-3 w-full h-20 bg-gradient-to-t from-black/90 to-black/0 text-white text-3xl font-medium z-[999]">
+                                    {item.title}
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </div>
+                </Swiper>
+            </div>
+        </section >
+    );
+}
+
+export default OurProject;

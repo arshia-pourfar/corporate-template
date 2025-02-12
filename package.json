@@ -11,6 +11,9 @@
   "dependencies": {
     "@react-three/drei": "^9.121.4",
     "@tabler/icons-react": "^3.29.0",
+    "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
     "clsx": "^2.1.1",
     "drei": "^2.2.21",
     "motion": "^12.0.6",
