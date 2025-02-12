@@ -7,6 +7,8 @@ import { EffectCards, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { Compare } from "@/ui/components/compare";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 interface Slide {
     id: number;
     username: string;
@@ -77,22 +79,17 @@ const OurProject: React.FC<DemoSliderProps> = () => {
             href: '#',
         },
     ]
+
     return (
         <section className="w-full mt-10 text-center">
             <h2 className="font-extrabold text-5xl mb-3">Our Projects</h2>
             <div className="inter-var my-10 relative">
-
-                {/* ////////////////////////////// add icon instead ◀ //////////////////////////////// */}
-                {/* دکمه قبل */}
-                <button className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 p-2 rounded-full">
-                    ◀
+                <button className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-orange-500 text-white flex justify-center items-center p-3 rounded-full">
+                    <FontAwesomeIcon icon={faAngleLeft} className="size-9 font-extralight" />
                 </button>
-
-                {/* دکمه بعد */}
-                <button className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 p-2 rounded-full">
-                    ▶
+                <button className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-orange-500 text-white flex justify-center items-center p-3 rounded-full">
+                    <FontAwesomeIcon icon={faAngleRight} className="size-9 font-extralight" />
                 </button>
-                {/* ////////////////////////////// add icon instead ▶ //////////////////////////////// */}
 
                 <Swiper
                     modules={[EffectCards, Navigation]}
@@ -105,7 +102,7 @@ const OurProject: React.FC<DemoSliderProps> = () => {
                 >
                     <div className="relative group/card rounded-xl flex justify-center items-center">
                         {projectList.map((item, index) => (
-                            <SwiperSlide key={index} className="cursor-grab rounded-xl relative border-4 border-black">
+                            <SwiperSlide key={index} className="cursor-grab rounded-xl relative border-4 border-black bg-black">
                                 <Compare
                                     firstImage={item.firstImage}
                                     secondImage={item.secondImage}

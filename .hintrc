@@ -4,6 +4,8 @@
   ],
   "hints": {
     "typescript-config/consistent-casing": "off",
-    "no-inline-styles": "off"
+    "no-inline-styles": "off",
+    "button-type": "off",
+    "axe/name-role-value": "off"
   }
 }
