@@ -35,6 +35,9 @@ importers:
       drei:
         specifier: ^2.2.21
         version: 2.2.21(react-dom@18.3.1(react@18.3.1))(react-three-fiber@6.0.13(@types/react@19.0.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.173.0))(react@18.3.1)(three@0.173.0)
+      framer-motion:
+        specifier: ^12.4.2
+        version: 12.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       motion:
         specifier: ^12.0.6
         version: 12.0.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1191,8 +1194,8 @@ packages:
     resolution: {integrity: sha512-Ld2g8rrAyMYFXBhEqMz8ZAHBi4J4uS1i/CxGMDnjyFWddMXLVcDp051DZfu+t7+ab7Wv6SMqpWmyFIj5UbfFvg==}
     engines: {node: '>=14'}
 
-  framer-motion@12.0.6:
-    resolution: {integrity: sha512-LmrXbXF6Vv5WCNmb+O/zn891VPZrH7XbsZgRLBROw6kFiP+iTK49gxTv2Ur3F0Tbw6+sy9BVtSqnWfMUpH+6nA==}
+  framer-motion@12.4.2:
+    resolution: {integrity: sha512-pW307cQKjDqEuO1flEoIFf6TkuJRfKr+c7qsHAJhDo4368N/5U8/7WU8J+xhd9+gjmOgJfgp+46evxRRFM39dA==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -3614,7 +3617,7 @@ snapshots:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
 
-  framer-motion@12.0.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  framer-motion@12.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       motion-dom: 12.0.0
       motion-utils: 12.0.0
@@ -3992,7 +3995,7 @@ snapshots:
 
   motion@12.0.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      framer-motion: 12.0.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 12.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       tslib: 2.8.1
     optionalDependencies:
       react: 18.3.1
