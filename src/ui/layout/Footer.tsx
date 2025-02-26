@@ -1,17 +1,19 @@
 import Image from "next/image";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faWhatsapp, faTelegram, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
     return (
         <footer className="mt-12 relative">
-            <div className="border-t border-black/40 w-full absolute left-0"></div>
+            <div className="border-t border-black/40 "></div>
             <div className="flex pt-5">
-                <div className='basis-1/4 relative'>
-                    <Image width={100} height={100} className='w-[95px] m-auto -rotate-6' src={'/images/7459344.jpg'} alt="" />
-                    <ul className='mt-2 flex items-center justify-center text-zinc-800'>
-                        <li className='mx-2 text-[33px] border-[#2E1B1B] border-2 text-[#2E1B1B] w-[50px] h-[50px] flex items-center justify-center rounded-full'><i className='fab fa-instagram rounded-lg'></i></li>
-                        <li className='mx-2 text-[33px] border-[#2E1B1B] border-2 text-[#2E1B1B] w-[50px] h-[50px] flex items-center justify-center rounded-full'><i className='fab fa-telegram rounded-lg'></i></li>
-                        <li className='mx-2 text-[33px] border-[#2E1B1B] border-2 text-[#2E1B1B] w-[50px] h-[50px] flex items-center justify-center rounded-full'><i className='fab fa-whatsapp rounded-lg'></i></li>
-                        <li className='mx-2 text-[33px] border-[#2E1B1B] border-2 text-[#2E1B1B] w-[50px] h-[50px] flex items-center justify-center rounded-full'><i className='fab fa-twitter rounded-lg'></i></li>
+                <div className='basis-1/4 relative -mt-3'>
+                    <Image width={120} height={120} className='m-auto filter grayscale' src={'/images/7459344.jpg'} alt="" />
+                    <ul className='px-10 flex items-center justify-evenly text-zinc-800'>
+                        <FontAwesomeIcon icon={faInstagram} className="size-9 rounded-full border-2 p-[6px] border-black font-extralight" />
+                        <FontAwesomeIcon icon={faWhatsapp} className="size-9 rounded-full border-2 p-[6px] border-black font-extralight" />
+                        <FontAwesomeIcon icon={faTelegram} className="size-9 rounded-full border-2 p-[6px] border-black font-extralight" />
+                        <FontAwesomeIcon icon={faGithub} className="size-9 rounded-full border-2 p-[6px] border-black font-extralight" />
                     </ul>
                 </div>
                 <div className='basis-1/4 px-4 ps-14 text-[17px]'>
