@@ -24,7 +24,7 @@ export default function SupportCompany() {
                 <div className="flex animate-marquee">
                     {logoMarquee.map((name, index) => (
                         <>
-                            <Image width={120} height={40} className="transition-all mx-10 grayscale hover:grayscale-0" src={`/images/business-partners-logo/${name}`} alt={`Company ${index}`} />
+                            <Image width={100} height={40} className="transition-all mx-10 grayscale hover:grayscale-0" src={`/images/business-partners-logo/${name}`} alt={`Company ${index}`} />
                         </>
                     ))}
                 </div>

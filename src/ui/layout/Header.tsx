@@ -8,8 +8,8 @@ export default function Header() {
     const profileTeamImage = ["amy-burns", "balazs-orban", "delba-de-oliveira", "evil-rabbit", "lee-robinson", "michael-novotny"];
     return (
         <header className="relative">
-            <div className="p-5 flex justify-between z-10">
-                <h1 className="font-black text-7xl w-3/5 leading-tight">
+            <div className="py-5 flex justify-between z-10">
+                <h1 className="font-black text-6xl w-3/5 leading-normal">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </h1>
                 <div className="w-1/4 m-auto text-center">
@@ -17,7 +17,7 @@ export default function Header() {
                 </div>
             </div>
             <div className="flex justify-between items-center relative w-full">
-                <Image className="w-3/5 rounded-xl relative -left-10" src="/images/header-image.jpg" alt="Main" width={500} height={300} />
+                <Image className="w-3/5 rounded-xl relative -left-5" src="/images/header-image.jpg" alt="Main" width={500} height={300} />
                 {/* <ThreeDModel /> */}
                 <div className="w-2/5 flex flex-col justify-between absolute right-0 h-full">
                     <div className="mt-6">
