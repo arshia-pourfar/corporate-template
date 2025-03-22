@@ -1,108 +1,54 @@
-// /* eslint-disable react-hooks/rules-of-hooks */
+"use client";
 
-// "use client";
-// import React from 'react';
-// import { useLocation } from 'react-router-dom';
-
-// import { NavLink as Link } from "react-router-dom";
-// import styled from "styled-components";
-
-// // import logo from '../images/logo.png';
-// import Image from 'next/image';
-
-
-// const NavLink = styled(Link)`
-//     color: #808080;
-//     display: flex;
-//     align-items: center;
-//     text-decoration: none;
-//     padding: 0 1rem;
-//     height: 100%;
-//     cursor: pointer;
-//     &.active {
-//         color: #4d4dff;
-//     }
-// `;
-
-// function Navbar() {
-//     return (
-//         <nav id='navbar' className="flex justify-between items-center px-14 z-10">
-//             <a href="#" className="navbar-brand w-3/12">
-//                 <NavLink className='font-medium' to="/" >
-//                     {/* <Image src={logo} alt="logo" className='mt-2' /> */}
-//                     <Image className="rounded-lg" src="/images/7459344.jpg" alt="Logo" width={100} height={100} />
-
-//                 </NavLink>
-//             </a>
-//             <ul className="navbar-nav flex items-center justify-center -mt-1 w-6/12">
-//                 <NavLink className='font-medium' to="/" >
-//                     Home
-//                 </NavLink>
-//                 <NavLink className='font-medium' to="/menu" >
-//                     {/* <StaggeredDropDown /> */}
-//                     Menu
-//                 </NavLink>
-//                 <NavLink className='font-medium' to="/about" >
-//                     About Us
-//                 </NavLink>
-//                 <NavLink className='font-medium' to="/contact" >
-//                     Contact
-//                 </NavLink>
-//                 <NavLink className='font-medium' to="/reservations" >
-//                     Reservations
-//                 </NavLink>
-//             </ul>
-//             <div className="w-3/12 h-12 text-end z-[2]">
-//                 {(() => {
-//                     const location = useLocation();
-//                     if (location.pathname !== '/') {
-//                         return (
-//                             <>
-//                                 <a href="#" className='hover:opacity-60 z-10 transition-opacity inline-block'>
-//                                     <i className="fa-solid fa-bag-shopping fa-2xl text-[#2E1B1B] me-5" />
-//                                 </a>
-//                                 <button type="button" className='text-lg font-medium border-2 border-[#2E1B1B] bg-white text-[#2E1B1B] rounded py-1 px-2 mx-1'>Sing up</button>
-//                                 <button type="button" className='text-lg font-medium border-2 border-[#2E1B1B] text-white bg-[#2E1B1B] rounded py-1 px-2 mx-1'>Sing in</button>
-//                             </>
-//                         )
-//                     } else {
-//                         return (
-//                             <>
-//                                 <a href="#" className='hover:opacity-60 z-10 transition-opacity inline-block'>
-//                                     <i className="fa-solid fa-bag-shopping fa-2xl text-white me-5" />
-//                                 </a>
-//                                 <button type="button" className='text-lg font-medium border-2 border-white text-[#F53D37] bg-white rounded py-1 px-2 mx-1'>Sing up</button>
-//                                 <button type="button" className='text-lg font-medium border-2 border-white text-white rounded py-1 px-2 mx-1'>Sing in</button>
-//                             </>
-//                         )
-//                     }
-//                 })()}
-//             </div>
-//         </nav>
-//     );
-// }
-
-
-// export default Navbar;
-
-
-
-
+import React, { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHamburger } from '@fortawesome/free-solid-svg-icons';
+
+const navbarList = [
+    { title: "Home", link: "/" },
+    { title: "About", link: "/about" },
+    { title: "Service", link: "/service" },
+    { title: "Project", link: "/project" },
+    { title: "Blog", link: "/blog" },
+    { title: "Contact", link: "/contact" },
+];
 
 export default function Navbar() {
-    const navbarList = ["Home", "About", "Service", "Project", "Blog", "Contact"];
+    const pathname = usePathname();
+    const [menuOpen, setMenuOpen] = useState(false);
+    console.log(menuOpen);
+
     return (
-        <nav className="flex justify-around items-center z-10">
-            <div className="w-1/6 text-center">
+        <nav id="navbar" className="flex items-center justify-between px-6 max-h-[15dvh] relative">
+            <div className="flex items-center w-1/6">
                 <Image className="rounded-lg" src="/images/7459344.jpg" alt="Logo" width={100} height={100} />
             </div>
-            <ul className="menu flex justify-evenly w-3/6 px-6 font-bold">
-                {navbarList.map((item) => (
-                    <li key={item}>{item}</li>
+
+            <button
+                className="lg:hidden block p-2 text-gray-700 z-40"
+            >
+                <FontAwesomeIcon icon={faHamburger} onClick={() => setMenuOpen(!menuOpen)} />
+            </button>
+
+            <ul
+                className={`menu flex flex-col lg:flex-row absolute z-20 lg:relative top-20 lg:top-auto left-0 w-full lg:w-auto bg-white shadow-sm lg:shadow-none transition-all duration-300 ease-in-out transform ${menuOpen ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0 lg:opacity-100 lg:translate-y-0"}`}
+            >
+                {navbarList.map((item, index) => (
+                    <li key={index} className="relative font-bold mx-1 text-center lg:text-left">
+                        <Link
+                            href={item.link}
+                            className={`block px-4 py-3 lg:px-4 lg:py-2 text-[#2E1B1B] text-[17px] tracking-[1px] cursor-pointer transition duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#F53D37] after:rounded after:scale-0 after:transition-transform after:origin-right hover:after:scale-100 hover:after:origin-left ${pathname === item.link ? "font-bold text-[#F53D37] after:scale-100" : ""}`}
+                        >
+                            {item.title}
+                        </Link>
+                    </li>
                 ))}
             </ul>
-            <div className="w-1/6 text-right">
+
+            <div className="hidden lg:block w-1/6 text-right">
                 <button className="bg-black text-white py-3 px-6 text-base font-semibold rounded-full capitalize">
                     Test Button
                 </button>
@@ -110,3 +56,132 @@ export default function Navbar() {
         </nav>
     );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "use client";
+
+// import React, { useState } from "react";
+// import Link from "next/link";
+// import Image from "next/image";
+// import { usePathname } from "next/navigation";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faHamburger } from '@fortawesome/free-solid-svg-icons';
+
+// const navbarList = [
+//     { title: "Home", link: "/" },
+//     { title: "About", link: "/about" },
+//     { title: "Service", link: "/service" },
+//     { title: "Project", link: "/project" },
+//     { title: "Blog", link: "/blog" },
+//     { title: "Contact", link: "/contact" },
+// ];
+
+// export default function Navbar() {
+//     const pathname = usePathname();
+//     const [menuOpen, setMenuOpen] = useState(false);
+
+//     return (
+//         <nav id="navbar" className="flex items-center justify-between px-6 max-h-[15dvh]">
+//             <div className="flex items-center w-1/6">
+//                 <Image className="rounded-lg" src="/images/7459344.jpg" alt="Logo" width={100} height={100} />
+//             </div>
+
+//             <button
+//                 className="lg:hidden block p-2 text-gray-700"
+//                 onClick={() => setMenuOpen(!menuOpen)}
+//             >
+//                 <FontAwesomeIcon icon={faHamburger} />
+//             </button>
+
+//             <ul
+//                 className={`menu lg:flex flex-col lg:flex-row absolute lg:relative top-16 lg:top-auto left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none transition-transform duration-300 ease-in-out ${menuOpen ? "translate-y-0" : "-translate-y-full lg:translate-y-0"}`}
+//             >
+//                 {navbarList.map((item, index) => (
+//                     <li key={index} className="relative font-bold mx-1 text-center lg:text-left">
+//                         <Link
+//                             href={item.link}
+//                             className={`block px-4 py-3 lg:px-4 lg:py-2 text-[#2E1B1B] text-[17px] tracking-[1px] cursor-pointer transition duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#F53D37] after:rounded after:scale-0 after:transition-transform after:origin-right hover:after:scale-100 hover:after:origin-left ${pathname === item.link ? "font-bold text-[#F53D37] after:scale-100" : ""}`}
+//                         >
+//                             {item.title}
+//                         </Link>
+//                     </li>
+//                 ))}
+//             </ul>
+
+//             <div className="hidden lg:block w-1/6 text-right">
+//                 <button className="bg-black text-white py-3 px-6 text-base font-semibold rounded-full capitalize">
+//                     Test Button
+//                 </button>
+//             </div>
+//         </nav>
+//     );
+// }
+
+
+
+
+
+
+// "use client";
+
+// import React from "react";
+// import Link from "next/link";
+// import Image from "next/image";
+// import { usePathname } from "next/navigation";
+
+// const navbarList = [
+//     { title: "Home", link: "/" },
+//     { title: "About", link: "/about" },
+//     { title: "Service", link: "/service" },
+//     { title: "Project", link: "/project" },
+//     { title: "Blog", link: "/blog" },
+//     { title: "Contact", link: "/contact" },
+// ];
+
+// export default function Navbar() {
+//     const pathname = usePathname();
+
+//     return (
+//         <nav id="navbar" className="flex justify-around items-center z-10 max-h-[15dvh]">
+//             <div className="w-1/6 text-center">
+//                 <Image
+//                     className="rounded-lg"
+//                     src="/images/7459344.jpg"
+//                     alt="Logo"
+//                     width={100}
+//                     height={100}
+//                 />
+//             </div>
+//             <ul className="menu flex justify-evenly w-3/6 px-6 font-bold navbar-nav">
+//                 {navbarList.map((item, index) => (
+//                     <li key={index} className="relative">
+//                         <Link
+//                             href={item.link}
+//                             className={`relative px-4 py-2 text-[#2E1B1B] bg-transparent text-[17px] tracking-[1px] m-[0px_3px] p-[15px] cursor-pointer transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#F53D37] after:rounded after:scale-0 after:transition-transform after:origin-right hover:after:scale-100 hover:after:origin-left ${pathname === item.link ? "font-bold text-[#F53D37] after:scale-100" : ""
+//                                 }`}
+//                         >
+//                             {item.title}
+//                         </Link>
+//                     </li>
+//                 ))}
+//             </ul>
+//             <div className="w-1/6 text-right">
+//                 <button className="bg-black text-white py-3 px-6 text-base font-semibold rounded-full capitalize">
+//                     Test Button
+//                 </button>
+//             </div>
+//         </nav>
+//     );
+// }
