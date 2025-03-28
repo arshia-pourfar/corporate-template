@@ -6,7 +6,7 @@ export default function Header() {
     const profileTeamImage = ["amy-burns", "balazs-orban", "delba-de-oliveira", "evil-rabbit", "lee-robinson", "michael-novotny"];
     return (
         <header className="relative p-4 md:p-8">
-            <div className=" flex flex-col md:flex-row justify-between items-center z-10">
+            <div className="flex flex-col md:flex-row justify-between items-center z-10">
                 <h1 className="font-black text-4xl md:text-5xl lg:text-6xl md:w-3/5 leading-normal text-center md:text-left">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </h1>
@@ -16,7 +16,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col lg:flex-row justify-between items-center relative w-full xl:mt-0 md:mt-10">
                 <Image className="w-full lg:w-3/5 rounded-xl" src="/images/header-image.jpg" alt="Main" width={500} height={300} />
-                <div className="w-full lg:w-2/5 lg:mt-0 mt-5 ms-6 flex flex-col justify-between h-full">
+                <div className="w-full lg:w-2/5 lg:mt-0 mt-5 sm:ms-6 flex flex-col justify-between h-full">
                     <div className="lg:absolute xl:top-5 top-0">
                         <h2 className="font-extrabold text-3xl xl:text-5xl mb-3 text-center md:text-left">Our Team</h2>
                         <p className="font-medium text-base xl:text-xl text-center md:text-left">

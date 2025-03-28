@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       {/* // Main container for the homepage with padding and auto margins */}
-      <main className="container p-2 px-8 m-auto">
+      <main className="container p-2 px-8 m-auto overflow-x-hidden">
         {/* Navigation bar at the top of the page */}
         <Navbar />
 
