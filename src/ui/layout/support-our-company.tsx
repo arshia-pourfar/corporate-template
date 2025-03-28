@@ -1,5 +1,5 @@
-// "use client";
 import Image from "next/image";
+
 export default function SupportCompany() {
     const logoMarquee = [
         'preview.jpg',
@@ -16,16 +16,23 @@ export default function SupportCompany() {
         'logo.png',
         'preview.jpg',
         'logo.png',
-    ]
+    ];
+
     return (
         <section className="mt-16 w-full text-center">
-            <h2 className="font-extrabold text-5xl">Our Valued Business Partners</h2>
+            <h2 className="font-extrabold text-3xl md:text-5xl">Our Valued Business Partners</h2>
             <div className="overflow-hidden whitespace-nowrap relative w-full py-4 my-7">
                 <div className="flex animate-marquee">
-                    {logoMarquee.map((name, index) => (
-                        <>
-                            <Image width={100} height={40} className="transition-all mx-10 grayscale hover:grayscale-0" src={`/images/business-partners-logo/${name}`} alt={`Company ${index}`} />
-                        </>
+                    {[...logoMarquee, ...logoMarquee].map((name, index) => (
+                        <div key={index} className="flex-shrink-0">
+                            <Image
+                                width={80} // سایز کوچکتر در موبایل
+                                height={32}
+                                className="mx-5 md:mx-10 grayscale hover:grayscale-0 transition-all"
+                                src={`/images/business-partners-logo/${name}`}
+                                alt={`Company ${index}`}
+                            />
+                        </div>
                     ))}
                 </div>
             </div>

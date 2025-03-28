@@ -2,49 +2,27 @@ import Image from "next/image";
 
 export default function Blog() {
     return (
-        <section className="mt-14">
-            <div className="flex justify-between items-center px-2">
-                <h2 className="font-extrabold text-5xl">Blog</h2>
-                <button className="p-3 px-8 text-lg font-medium bg-orange-500 text-white rounded-full">See More</button>
+        <section className="mt-14 px-4">
+            <div className="flex flex-row justify-between items-center">
+                <h2 className="font-extrabold text-3xl md:text-5xl">Blog</h2>
+                <button className="p-2 px-6 md:p-3 md:px-8 text-base md:text-lg font-medium bg-orange-500 text-white rounded-full">
+                    See More
+                </button>
             </div>
-            <div className="flex justify-around overflow-hidden mt-6">
-                <div className="basis-1/4 mx-2 shadow-sm border border-black/20 rounded-md">
-                    {/* this div is image */}
-                    <Image className="rounded-t-md" width={1000} height={1000} src={'/images/about-us.jpg'} alt="" />
-                    {/* <div className="bg-black h-96"></div> */}
-                    <div className="bg-white w-full p-2 rounded-md">
-                        <h3 className="font-semibold text-xl">Lorem ipsum dolor</h3>
-                        <p className="line-clamp-3 text-sm mt-1 opacity-75 w-full">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat vel consequatur culpa voluptatem, numquam consequuntur impedit tenetur modi fugit? Harum, placeat. Pariatur dicta, soluta neque hic dolorum eligendi porro distinctio!</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+                {["about-us.jpg", "medium-shot-low-angle-view-smiling-engineer.jpg", "header-image.jpg", "about-us.jpg"].map((image, index) => (
+                    <div key={index} className="shadow-sm border border-black/20 rounded-md overflow-hidden">
+                        <Image className="rounded-t-md w-full h-48 object-cover" width={1000} height={1000} src={`/images/${image}`} alt="" />
+                        <div className="bg-white p-4">
+                            <h3 className="font-semibold text-lg">Lorem ipsum dolor</h3>
+                            <p className="line-clamp-3 text-sm mt-2 opacity-75">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vel consequatur culpa voluptatem, numquam consequuntur impedit tenetur modi fugit? Harum, placeat.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className="basis-1/4 mx-2 shadow-sm border border-black/20 rounded-md">
-                    {/* this div is image */}
-                    <Image className="rounded-t-md" width={1000} height={1000} src={'/images/medium-shot-low-angle-view-smiling-engineer.jpg'} alt="" />
-                    {/* <div className="bg-black h-96"></div> */}
-                    <div className="bg-white w-full p-2 rounded-md">
-                        <h3 className="font-semibold text-xl">Lorem ipsum dolor</h3>
-                        <p className="line-clamp-3 text-sm mt-1 opacity-75 w-full">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat vel consequatur culpa voluptatem, numquam consequuntur impedit tenetur modi fugit? Harum, placeat. Pariatur dicta, soluta neque hic dolorum eligendi porro distinctio!</p>
-                    </div>
-                </div>
-                <div className="basis-1/4 mx-2 shadow-sm border border-black/20 rounded-md">
-                    {/* this div is image */}
-                    <Image className="rounded-t-md" width={1000} height={1000} src={'/images/header-image.jpg'} alt="" />
-                    {/* <div className="bg-black h-96"></div> */}
-                    <div className="bg-white w-full p-2 rounded-md">
-                        <h3 className="font-semibold text-xl">Lorem ipsum dolor</h3>
-                        <p className="line-clamp-3 text-sm mt-1 opacity-75 w-full">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat vel consequatur culpa voluptatem, numquam consequuntur impedit tenetur modi fugit? Harum, placeat. Pariatur dicta, soluta neque hic dolorum eligendi porro distinctio!</p>
-                    </div>
-                </div>
-                <div className="basis-1/4 mx-2 shadow-sm border border-black/20 rounded-md">
-                    {/* this div is image */}
-                    <Image className="rounded-t-md" width={1000} height={1000} src={'/images/about-us.jpg'} alt="" />
-                    {/* <div className="bg-black h-96"></div> */}
-                    <div className="bg-white w-full p-2 rounded-md">
-                        <h3 className="font-semibold text-xl">Lorem ipsum dolor</h3>
-                        <p className="line-clamp-3 text-sm mt-1 opacity-75 w-full">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat vel consequatur culpa voluptatem, numquam consequuntur impedit tenetur modi fugit? Harum, placeat. Pariatur dicta, soluta neque hic dolorum eligendi porro distinctio!</p>
-                    </div>
-                </div>
+                ))}
             </div>
         </section>
-    )
+    );
 }
