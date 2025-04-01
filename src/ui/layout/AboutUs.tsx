@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function AboutUs() {
     return (
         <section className="flex flex-col-reverse lg:flex-row justify-between mt-20 items-stretch">
-            <div className="basis-1/2 sm:text-center md:text-left px-4 py-3 relative">
-                <h2 className="font-extrabold text-3xl md:text-4xl lg:text-5xl text-center md:text-left lg:mt-0 mt-5 my-2">About Us</h2>
+            <div className="basis-1/2 text-center md:text-left px-4 py-3 relative">
+                <h2 className="font-extrabold text-3xl md:text-4xl lg:text-5xl lg:mt-0 mt-5 my-2">About Us</h2>
                 <div className="sm:text-lg font-medium sm:mt-6 mt-3 lg:line-clamp-[8] line-clamp-[10]">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.

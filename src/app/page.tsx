@@ -8,6 +8,8 @@ import dataSlider from '@/data/our-project-data.json'; // JSON data for the proj
 import AboutUs from "@/ui/layout/AboutUs"; // About Us section component
 import Blog from "@/ui/layout/Blog"; // Blog section component
 import Footer from "@/ui/layout/Footer"; // Footer section component
+import WhyUs from "@/ui/layout/WhyUs";
+import { ParallaxScroll } from "@/ui/layout/parallax-scroll";
 
 // Default export for the Home component
 export default function Home() {
@@ -33,6 +35,29 @@ export default function Home() {
 
         {/* Section encouraging users to support the company */}
         <SupportCompany />
+
+
+        <WhyUs />
+        <ParallaxScroll clientsText={[
+          { image: "/images/person/amy-burns.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.1" },
+          { image: "/images/person/lee-robinson.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.2" },
+          { image: "/images/person/evil-rabbit.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.3" },
+          { image: "/images/person/delba-de-oliveira.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.4" },
+          { image: "/images/person/balazs-orban.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.5" },
+          { image: "/images/person/amy-burns.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.6" },
+          { image: "/images/person/michael-novotny.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.7" },
+          { image: "/images/person/delba-de-oliveira.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.8" },
+          { image: "/images/person/balazs-orban.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.9" },
+          { image: "/images/person/evil-rabbit.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.10" },
+          { image: "/images/person/lee-robinson.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.11" },
+          { image: "/images/person/balazs-orban.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.12" },
+          { image: "/images/person/evil-rabbit.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.13" },
+          { image: "/images/person/michael-novotny.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.14" },
+          { image: "/images/person/delba-de-oliveira.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.15" },
+          { image: "/images/person/amy-burns.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.16" },
+          { image: "/images/person/lee-robinson.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.17" },
+          { image: "/images/person/michael-novotny.png", clientName: "Lorem ipsum", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quibusdam repellendus velit impedit, libero autem, dignissimos ut quis, accusamus adipisci. Est voluptatem voluptas quasi alias animi veniam quam facilis.18" },
+        ]} className="" key={0} />
 
         {/* Blog section displaying recent blog posts or articles */}
         <Blog />

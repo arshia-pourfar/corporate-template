@@ -21,7 +21,7 @@ const rubik = Rubik({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scrollbar scrollbar-thumb-gray-500 scrollbar-track-gray-200">
       <body className={rubik.className}>
         {/* <ErrorBoundary FallbackComponent={ErrorFallback}> */}
         {children}

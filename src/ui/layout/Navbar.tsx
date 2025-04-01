@@ -19,7 +19,6 @@ const navbarList = [
 export default function Navbar() {
     const pathname = usePathname();
     const [menuOpen, setMenuOpen] = useState(false);
-    console.log(menuOpen);
 
     return (
         <nav id="navbar" className="flex items-center justify-between px-6 max-h-[15dvh] relative">
@@ -34,13 +33,13 @@ export default function Navbar() {
             </button>
 
             <ul
-                className={`menu flex flex-col lg:flex-row absolute z-20 lg:relative top-20 lg:top-auto left-0 w-full lg:w-auto bg-white shadow-sm lg:shadow-none transition-all duration-300 ease-in-out transform ${menuOpen ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0 -z-20 lg:opacity-100 lg:translate-y-0"}`}
+                className={`menu flex flex-col lg:flex-row absolute z-20 lg:relative top-20 lg:top-auto left-0 w-full lg:w-auto bg-white shadow-sm lg:shadow-none transition-all duration-1000 ease-in-out transform ${menuOpen ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0 -z-20 lg:opacity-100 lg:translate-y-0"}`}
             >
                 {navbarList.map((item, index) => (
                     <li key={index} className="relative font-bold mx-1 text-center lg:text-left">
                         <Link
                             href={item.link}
-                            className={`block px-4 py-3 lg:px-4 lg:py-2 text-[#2E1B1B] text-[17px] tracking-[1px] cursor-pointer transition duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[4px] after:bg-[#F53D37] after:rounded after:scale-0 after:transition-transform after:origin-right hover:after:scale-100 hover:after:origin-left ${pathname === item.link ? "font-bold text-[#F53D37] after:scale-100" : ""}`}
+                            className={`block px-4 py-3 lg:px-4 lg:py-2 text-[#2E1B1B] text-[17px] tracking-[1px] cursor-pointer transition duration-1000 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[4px] after:bg-[#F53D37] after:rounded after:scale-0 after:transition-transform after:origin-right hover:after:scale-100 hover:after:origin-left ${pathname === item.link ? "font-bold text-[#F53D37] after:scale-100" : ""}`}
                         >
                             {item.title}
                         </Link>

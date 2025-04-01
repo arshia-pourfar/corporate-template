@@ -26,7 +26,7 @@ export default function SupportCompany() {
                     {[...logoMarquee, ...logoMarquee].map((name, index) => (
                         <div key={index} className="flex-shrink-0">
                             <Image
-                                width={80} // سایز کوچکتر در موبایل
+                                width={80}
                                 height={32}
                                 className="mx-5 md:mx-10 grayscale hover:grayscale-0 transition-all"
                                 src={`/images/business-partners-logo/${name}`}
