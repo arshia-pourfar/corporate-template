@@ -38,18 +38,17 @@ export const ParallaxScroll = ({
 
 
     useEffect(() => {
-
         // محدود کردن تعداد کامنت‌ها به 6 تا برای صفحه‌های موبایل
         const handleResize = () => {
             if (window.innerWidth < 640) { // اندازه گوشی‌ها
                 setVisibleClients(clientsText.slice(0, 6)); // 6 کامنت اول رو نمایش می‌دهیم
-                setThirdValue(1)
+                setThirdValue(1) // تعداد ستون ها برای تقسیم بندی
             } else if (window.innerWidth < 1024) {
                 setVisibleClients(clientsText.slice(0, 12)); // 12 کامنت اول رو نمایش می‌دهیم
-                setThirdValue(2)
+                setThirdValue(2) // تعداد ستون ها برای تقسیم بندی
             } else if (window.innerWidth >= 1024) {
                 setVisibleClients(clientsText); // نمایش تمام کامنت‌ها در اندازه‌های بزرگتر
-                setThirdValue(3)
+                setThirdValue(3) // تعداد ستون ها برای تقسیم بندی
             }
         };
 
