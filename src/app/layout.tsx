@@ -4,6 +4,8 @@ import "./globals.css";
 
 // Importing the Rubik font from Google Fonts using Next.js font optimization
 import { Rubik } from "next/font/google";
+import Footer from "@/components/ui/Footer";
+import Navbar from "@/components/ui/Navbar";
 
 // Configuring the Rubik font with specific subsets and weights
 // - subsets: ["latin"] ensures the font supports Latin characters
@@ -23,9 +25,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="scrollbar scrollbar-thumb-gray-500 scrollbar-track-gray-200">
       <body className={rubik.className}>
-        {/* <ErrorBoundary FallbackComponent={ErrorFallback}> */}
-        {children}
-        {/* </ErrorBoundary> */}
+        <Navbar />
+        <div className="container p-2 px-8 m-auto overflow-x-hidden">
+          {/* <ErrorBoundary FallbackComponent={ErrorFallback}> */}
+          {children}
+          {/* </ErrorBoundary> */}
+        </div>
+        <Footer />
       </body>
     </html>
   );
