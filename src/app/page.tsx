@@ -2,6 +2,7 @@
 // import Navbar from "@/components/ui/Navbar"; // Navigation bar component
 import Header from "@/components/ui/Header"; // Header section component
 import Services from "@/components/ui/Services"; // Services section component
+// import ThreeDSection from "@/components/ui/3D-modulse"; // 3D section component
 import SupportCompany from "@/components/shared/support-our-company"; // Support our company section component
 import OurProjects from "@/components/ui/Projects"; // Projects section component (takes data as a prop)
 import dataSlider from '@/data/our-project-data.json'; // JSON data for the projects slider
@@ -23,6 +24,9 @@ export default function Home() {
 
         {/* Services section showcasing offered services */}
         <Services />
+
+        {/* 3D Solutions section with new image */}
+        {/* <ThreeDSection /> */}
 
         {/* Projects section displaying a slider of projects */}
         {/* Passes the `dataSlider` JSON data as a prop to the `OurProjects` component */}

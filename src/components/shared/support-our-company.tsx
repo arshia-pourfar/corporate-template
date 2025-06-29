@@ -29,7 +29,7 @@ export default function SupportCompany() {
                                 width={80}
                                 height={32}
                                 className="mx-5 md:mx-10 grayscale hover:grayscale-0 transition-all"
-                                src={`/images/business-partners-logo/${name}`}
+                                src={`/images/business-partners/${name}`}
                                 alt={`Company ${index}`}
                             />
                         </div>

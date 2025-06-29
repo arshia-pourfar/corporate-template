@@ -41,7 +41,7 @@ export default function Footer() {
                     <div className="text-center lg:text-left lg:mt-0 mt-4">
                         <h1 className="font-bold text-lg sm:text-xl">Address</h1>
                         <ul className="mt-3 space-y-2 sm:space-y-3">
-                            <li>Lorem ipsum dolor St</li>
+                            <li>123 Construction Avenue</li>
                             <li><a href="mailto:testemail@gmail.com">testemail@gmail.com</a></li>
                             <li><a href="tel:888-123-42278">888-123-42278</a></li>
                         </ul>

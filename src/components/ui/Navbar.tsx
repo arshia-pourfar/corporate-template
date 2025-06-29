@@ -49,12 +49,7 @@ export default function Navbar() {
             </ul>
 
             <div className="hidden lg:block w-1/6 text-right">
-                {/* <button className="bg-black text-white py-3 px-6 text-base font-semibold rounded-full capitalize">
-                    Test Button
-                </button> */}
-                {/* ///////////////////////////////////////////////////////////////// */}
                 <Button link="/contact" text="Get a Quote" />
-                {/* ///////////////////////////////////////////////////////////////// */}
             </div>
         </nav>
     );

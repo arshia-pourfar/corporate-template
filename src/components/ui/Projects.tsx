@@ -26,37 +26,37 @@ const OurProject: React.FC<DemoSliderProps> = () => {
         {
             firstImage: '/images/header-image.jpg',
             secondImage: '/images/medium-shot-low-angle-view-smiling-engineer.jpg',
-            title: 'Lorem ipsum, dolor',
+            title: 'Modern Office Complex',
             href: '#',
         },
         {
             firstImage: '/images/projects/project-3.jpg',
             secondImage: '/images/projects/project-1.jpg',
-            title: 'sit amet consectetur',
+            title: 'Residential Tower',
             href: '#',
         },
         {
             firstImage: '/images/header-image.jpg',
             secondImage: '/images/projects/project-2.jpg',
-            title: 'adipisicing elit.',
+            title: 'Industrial Warehouse',
             href: '#',
         },
         {
             firstImage: '/images/header-image.jpg',
             secondImage: '/images/medium-shot-low-angle-view-smiling-engineer.jpg',
-            title: 'Deleniti aspernatur',
+            title: 'Shopping Center',
             href: '#',
         },
         {
             firstImage: '/images/projects/project-3.jpg',
             secondImage: '/images/projects/project-1.jpg',
-            title: 'quidem magnam',
+            title: 'Hospital Extension',
             href: '#',
         },
         {
             firstImage: '/images/header-image.jpg',
             secondImage: '/images/projects/project-2.jpg',
-            title: 'repudiandae in eligendi',
+            title: 'Educational Campus',
             href: '#',
         },
     ];

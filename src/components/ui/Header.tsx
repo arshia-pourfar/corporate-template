@@ -8,7 +8,7 @@ export default function Header() {
         <header className="relative p-4 md:p-8 md:pt-0">
             <div className="flex flex-col md:flex-row justify-between items-center z-10">
                 <h1 className="font-black text-4xl md:text-5xl lg:text-6xl md:w-3/5 leading-normal text-center md:text-left">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Building Tomorrow&apos;s Infrastructure with Innovation and Excellence
                 </h1>
                 <div className="w-3/4 md:w-1/4 m-auto text-center mt-6 md:mt-0">
                     <Image className="w-40 md:w-80 mx-auto" src="/images/7459344.jpg" alt="Header Image" width={200} height={200} />
@@ -20,7 +20,7 @@ export default function Header() {
                     <div className="lg:absolute xl:top-5 top-0">
                         <h2 className="font-extrabold text-3xl xl:text-5xl mb-3 text-center md:text-left">Our Team</h2>
                         <p className="font-medium text-base xl:text-xl text-center md:text-left">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, at. Blanditiis rerum vero magni labore corrupti incidunt voluptate, deserunt distinctio harum reprehenderit esse corporis similique cum nisi enim voluptas sed?
+                            Our dedicated team of professionals brings years of expertise in construction and engineering. We specialize in delivering high-quality projects that exceed expectations while maintaining the highest standards of safety and sustainability.
                         </p>
                         <div className="flex justify-center md:justify-start items-center mt-5 cursor-pointer">
                             {profileTeamImage.map((name) => (
