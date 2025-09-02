@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className="scrollbar scrollbar-thumb-gray-500 scrollbar-track-gray-200">
       <body className={rubik.className}>
         <Navbar />
-        <div className="container p-2 px-8 m-auto overflow-x-hidden">
+        <div className="container p-2 sm:px-8 m-auto overflow-x-hidden">
           {/* <ErrorBoundary FallbackComponent={ErrorFallback}> */}
           {children}
           {/* </ErrorBoundary> */}

@@ -65,10 +65,10 @@ const OurProject: React.FC<DemoSliderProps> = () => {
         <section className="w-full mt-10 text-center px-4">
             <h2 className="font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-3">Our Projects</h2>
             <div className="inter-var my-10 relative flex justify-center">
-                <button className="swiper-button-prev absolute -left-10 sm:left-5 top-1/2 -translate-y-1/2 z-10 bg-orange-500 text-white flex justify-center items-center p-2 sm:p-3 rounded-full">
+                <button className="swiper-button-prev absolute -left-2 sm:left-5 top-1/2 -translate-y-1/2 z-10 bg-orange-500 text-white flex justify-center items-center p-2 sm:p-3 rounded-full">
                     <FontAwesomeIcon icon={faAngleLeft} className="size-6 sm:size-9 font-extralight" />
                 </button>
-                <button className="swiper-button-next absolute -right-10 sm:right-5 top-1/2 -translate-y-1/2 z-10 bg-orange-500 text-white flex justify-center items-center p-2 sm:p-3 rounded-full">
+                <button className="swiper-button-next absolute -right-2 sm:right-5 top-1/2 -translate-y-1/2 z-10 bg-orange-500 text-white flex justify-center items-center p-2 sm:p-3 rounded-full">
                     <FontAwesomeIcon icon={faAngleRight} className="size-6 sm:size-9 font-extralight" />
                 </button>
 
