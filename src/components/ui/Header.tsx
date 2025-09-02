@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import Link from "next/link";
 
 export default function Header() {
     const profileTeamImage = ["amy-burns", "balazs-orban", "delba-de-oliveira", "evil-rabbit", "lee-robinson", "michael-novotny"];
@@ -33,8 +34,8 @@ export default function Header() {
                         </div>
                     </div>
                     <div className="lg:w-2/5 flex flex-row font-semibold sm:text-lg text-sm capitalize text-center md:text-left lg:absolute xl:bottom-5 bottom-0">
-                        <button className="w-1/2 lg:mt-0 mt-5 xl:p-3 py-2 md:mx-0 mx-2 bg-orange-500 text-white rounded-full">Contact Us</button>
-                        <button className="w-1/2 lg:mt-0 mt-5 xl:p-3 py-2 md:mx-0 mx-2 md:ms-6 border-2 border-orange-500 text-orange-500 rounded-full">About Us</button>
+                        <Link href="./contact" className="flex justify-center items-center w-1/2 lg:mt-0 mt-5 xl:p-3 py-2 md:mx-0 mx-2 bg-orange-500 text-white rounded-full">Contact Us</Link>
+                        <Link href="./about" className="flex justify-center items-center w-1/2 lg:mt-0 mt-5 xl:p-3 py-2 md:mx-0 mx-2 md:ms-6 border-2 border-orange-500 text-orange-500 rounded-full">About Us</Link>
                     </div>
                 </div>
             </div>
