@@ -1,123 +1,98 @@
-# Corporate Website Template - Next.js & Tailwind CSS
+# 🏢 Corporate Template
 
-## Introduction
-Thank you for purchasing the Corporate Website Template! This template is built with Next.js 14 and Tailwind CSS, designed for modern, responsive, and high-performance corporate websites. Below you will find instructions for installation, usage, customization, and important notes.
-
----
-
-## Table of Contents
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Usage](#usage)
-- [Customization](#customization)
-- [Available Pages & Components](#available-pages--components)
-- [Assets & Images](#assets--images)
-- [Fonts & Icons](#fonts--icons)
-- [Performance & SEO](#performance--seo)
-- [Credits & Licenses](#credits--licenses)
-- [Support](#support)
+A clean, professional **corporate landing page template**, optimized for performance and modern UI/UX.  
+Perfect for businesses to showcase services, portfolios, team members, and contact information.
 
 ---
 
-## Installation
-1. **Extract the package** to your desired directory.
-2. Open a terminal in the project root and run:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-3. To start the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-4. Visit `http://localhost:3000` in your browser.
+## 🚀 Live Demo
+
+🌐 [View Live Site](https://corporate-template-iota.vercel.app/)
 
 ---
 
-## Project Structure
+## 🧩 Overview
+
+**Corporate Template** features multiple sections commonly used in corporate websites:
+
+- **Responsive Design** – Works on desktop, tablet, and mobile  
+- **Reusable Components** – Easy to extend and customize  
+- **Smooth Animations** – Enhanced user experience  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Next.js** – Frontend framework  
+- **Tailwind CSS** – Utility-first responsive styling  
+
+---
+
+## ✨ Key Features
+
+- ✅ Fully responsive layout  
+- ✅ Clean, professional modern UI/UX  
+- ✅ Modular and reusable components  
+- ✅ Smooth animations and transitions  
+
+
+---
+
+📥 Installation & Local Setup
+```bash
+# Clone the repository
+git clone https://github.com/arshia-pourfar/online-shop.git
+cd online-shop
+
+# Install frontend dependencies
+npm install
+npm run dev
+
+# Backend (optional)
+cd server
+npm install
+npm run dev
+
+Then open your browser and go to:
+http://localhost:3000
 ```
-my-company/
-├── public/                # Static assets (images, favicon, etc.)
+
+---
+
+## 📂 Project Structure
+
+```plaintext
+corporate-template/
+├── package.json                # Defines frontend dependencies, scripts, and project metadata
+├── package-lock.json           # Records the exact installed versions of dependencies for consistency
+├── tailwind.config.js          # Tailwind CSS setup (theme colors, fonts, breakpoints, etc.)
+├── .env                        # Environment variables for the frontend (e.g., API URLs, keys)
+├── README.md                   # Documentation explaining the project setup and usage
+├── public/                     # Static files like images, fonts, and icons served directly by the frontend
 ├── src/
-│   ├── app/               # Main app pages (Next.js routing)
-│   ├── components/        # Reusable UI components
-│   ├── data/              # JSON/data files
-│   └── lib/               # Utility functions
-├── styles/                # Global styles (if any)
-├── package.json           # Project dependencies and scripts
-└── ...
+    ├── app/                    # Next.js App Router pages, layouts, and route handlers
+    ├── components/             # Reusable UI components (buttons, cards, modals, etc.)
+    ├── lib/                    # Helper functions, API clients, and shared logic
+    └── styles/                 # Global CSS and styling utilities
 ```
 
 ---
 
-## Usage
-- All main pages are located in `src/app/` (e.g., `/about`, `/service`, `/project`, `/blog`, `/contact`).
-- The layout, navbar, and footer are shared across all pages for consistency.
-- To build for production:
-  ```bash
-  npm run build
-  npm start
-  # or
-  yarn build && yarn start
-  ```
+## 🤝 Contributing
 
+Contributions are welcome! Follow these steps:
+
+1. Fork the repository
+2. Create your feature branch: git checkout -b feature/YourFeature 
+3. Commit your changes: git commit -m "Add new feature" 
+4. Push to your branch: git push origin feature/YourFeature 
+5. Open a pull request
+  
 ---
 
-## Customization
-- **Colors & Styles:**
-  - Edit `tailwind.config.js` for color palette and theme changes.
-  - Use Tailwind utility classes in components for quick style adjustments.
-- **Logo & Branding:**
-  - Replace `public/images/7459344.jpg` and other logo files with your own.
-- **Content:**
-  - Update text, images, and links in the components inside `src/components/ui/` and page files in `src/app/`.
-- **Add/Remove Pages:**
-  - Add new files in `src/app/` for new pages. Use existing pages as a template.
-- **SEO:**
-  - Update meta tags in `src/app/layout.tsx` or add a custom `_document.tsx` if needed.
+## 👤 Author
 
----
-
-## Available Pages & Components
-- **Pages:** Home, About, Services, Projects, Blog, Contact
-- **Components:** Navbar, Footer, AboutUs, Blog, Projects, Services, Testimonials, ParallaxScroll, etc.
-- **Shared:** All main sections are modular and reusable.
-
----
-
-## Assets & Images
-- All images are stored in `public/images/` and its subfolders.
-- Replace sample images with your own for production use.
-- Ensure you have the right to use all images you include.
-
----
-
-## Fonts & Icons
-- Uses [Rubik](https://fonts.google.com/specimen/Rubik) font via Next.js font optimization.
-- Icons from [FontAwesome](https://fontawesome.com/) (free version).
-
----
-
-## Performance & SEO
-- Built with Next.js for fast performance and SEO-friendly routing.
-- Uses Next.js `<Image />` for optimized images.
-- Responsive and mobile-friendly by default.
-
----
-
-## Credits & Licenses
-- **Images:** Demo images are for preview only. Replace with your own or use free stock images.
-- **Icons:** FontAwesome Free
-- **Fonts:** Google Fonts (Rubik)
-
----
-
-## Support
-If you have any questions or need support, please contact us via your ThemeForest profile or the support email provided in your purchase.
-
----
-
-**Thank you for choosing our template! We hope it helps you build a great website.**
+**Arshia Pourfar**  
+🔗 [GitHub Profile](https://github.com/arshia-pourfar)  
+💼 [LinkedIn](https://www.linkedin.com/in/arshia-pourfar)  
+📧 [arshiapourfar@gmail.com](mailto:arshiapourfar@gmail.com)   
