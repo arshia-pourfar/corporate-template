@@ -41,19 +41,15 @@ Perfect for businesses to showcase services, portfolios, team members, and conta
 📥 Installation & Local Setup
 ```bash
 # Clone the repository
-git clone https://github.com/arshia-pourfar/online-shop.git
-cd online-shop
+# Clone the repository
+git clone https://github.com/arshia-pourfar/corporate-template.git
+cd corporate-template
 
-# Install frontend dependencies
+# Install dependencies
 npm install
 npm run dev
 
-# Backend (optional)
-cd server
-npm install
-npm run dev
-
-Then open your browser and go to:
+# Open your browser and go to:
 http://localhost:3000
 ```
 
