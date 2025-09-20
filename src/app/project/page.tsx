@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const projects = [
   {
@@ -53,7 +54,7 @@ export default function ProjectPage() {
       {/* هدر پروژه‌ها */}
       <section className="flex flex-col md:flex-row justify-between items-center">
         <h1 className="font-black text-4xl md:text-5xl lg:text-6xl leading-normal text-center md:text-left">
-          Our <span className="text-orange-500">Projects</span>
+          Our <span className="text-accent">Projects</span>
           <br />
           Excellence in Every Step
         </h1>
@@ -77,7 +78,7 @@ export default function ProjectPage() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="rounded-xl shadow-lg overflow-hidden border hover:shadow-xl transition group"
+              className="rounded-xl shadow-lg overflow-hidden border border-text-secondary/50 hover:shadow-xl transition group"
             >
               <Image
                 src={project.image}
@@ -88,8 +89,8 @@ export default function ProjectPage() {
               />
               <div className="p-5">
                 <h3 className="font-bold text-xl mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <button className="flex items-center gap-2 text-orange-500 font-semibold hover:underline">
+                <p className="text-text-secondary mb-4">{project.description}</p>
+                <button className="flex items-center gap-2 text-accent font-semibold hover:underline">
                   Learn More <FontAwesomeIcon icon={faArrowRight} />
                 </button>
               </div>
@@ -101,16 +102,18 @@ export default function ProjectPage() {
 
       {/* CTA */}
       <section className="mt-20 text-center">
-        <h2 className="font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-6">
+        <h2 className="text-text-primary font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-6">
           Let’s Build Your Future Project Together
         </h2>
-        <p className="max-w-2xl mx-auto text-gray-600 mb-6">
+        <p className="max-w-2xl mx-auto text-text-secondary mb-6">
           Ready to start your next big project? Contact us today and let our
           experts bring your vision to life with innovation and excellence.
         </p>
-        <button className="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
-          Contact Us
-        </button>
+        <Link href={'/contact'}>
+          <button className="bg-accent text-bg-primary px-8 py-3 rounded-full font-semibold cursor-pointer transition">
+            Contact Us
+          </button>
+        </Link>
       </section>
     </main>
   );

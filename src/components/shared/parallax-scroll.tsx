@@ -3,7 +3,6 @@ import { useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 
 type ClientItem = {
     image: string;
@@ -62,13 +61,13 @@ export const ParallaxScroll = ({
 
     return (
         <>
-            <h2 className="mt-20 py-5 w-full text-center font-extrabold text-3xl md:text-5xl">Testimonials & Clients</h2>
+            <h2 className="w-full text-center font-extrabold text-3xl md:text-5xl mb-5">Testimonials & Clients</h2>
             <div
-                className={cn("h-[40rem] items-start overflow-y-auto w-full scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200 scrollbar-rounded", className)}
+                className={`h-[40rem] items-start overflow-y-auto w-full scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200 scrollbar-rounded ${className}`}
                 ref={gridRef}
             >
                 <div
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start mx-auto gap-7 md:py-5 px-10"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start mx-auto gap-7 px-2"
                     ref={gridRef}
                 >
                     {/* اولین ردیف */}
@@ -87,9 +86,9 @@ export const ParallaxScroll = ({
                                             alt="Client Logo"
                                             className="size-12 rounded-full"
                                         />
-                                        <h3 className="text-xl font-semibold ms-3">{el.clientName}</h3>
+                                        <h3 className="text-text-primary text-xl font-semibold ms-3">{el.clientName}</h3>
                                     </div>
-                                    <p className="text-gray-600 ps-14 px-4">{el.text}</p>
+                                    <p className="text-text-secondary ps-14 px-4">{el.text}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -108,9 +107,9 @@ export const ParallaxScroll = ({
                                             alt="Client Logo"
                                             className="size-12 rounded-full"
                                         />
-                                        <h3 className="text-xl font-semibold ms-3">{el.clientName}</h3>
+                                        <h3 className="text-text-primary text-xl font-semibold ms-3">{el.clientName}</h3>
                                     </div>
-                                    <p className="text-gray-600 ps-14 px-4">{el.text}</p>
+                                    <p className="text-text-secondary ps-14 px-4">{el.text}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -129,9 +128,9 @@ export const ParallaxScroll = ({
                                             alt="Client Logo"
                                             className="size-12 rounded-full"
                                         />
-                                        <h3 className="text-xl font-semibold ms-3">{el.clientName}</h3>
+                                        <h3 className="text-text-primary text-xl font-semibold ms-3">{el.clientName}</h3>
                                     </div>
-                                    <p className="text-gray-600 ps-14 px-4">{el.text}</p>
+                                    <p className="text-text-secondary ps-14 px-4">{el.text}</p>
                                 </div>
                             </motion.div>
                         ))}

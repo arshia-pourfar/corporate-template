@@ -79,7 +79,7 @@
         "username": "test title",
         "tagline": "",
         "image": "/image2.jpg",
-        "profileImage": "/profile-image/michael-novotny.png",
+        "profileImage": "/profile-image/test-image.jpg",
         "buttons": [
             {
                 "id": 1,
@@ -94,7 +94,7 @@
         "username": "test title",
         "tagline": "",
         "image": "/image1.jpg",
-        "profileImage": "/profile-image/amy-burns.png",
+        "profileImage": "/profile-image/test-image.jpg",
         "buttons": [
             {
                 "id": 1,

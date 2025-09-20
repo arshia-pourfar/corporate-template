@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       {/* // Main container for the homepage with padding and auto margins */}
-      <main>
+      <main className="space-y-16">
 
         {/* Header section below the navbar */}
         <Header />

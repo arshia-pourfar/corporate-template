@@ -30,13 +30,13 @@ export default function Blog() {
     ];
 
     return (
-        <section className="mt-24 pb-6">
+        <section>
             {/* Header */}
             <div className="flex flex-row justify-between items-center mb-8">
                 <h2 className="font-extrabold text-3xl md:text-5xl">Blog</h2>
                 <Link
                     href="/blog"
-                    className="p-2 px-6 md:p-3 md:px-8 text-base md:text-lg font-medium bg-orange-500 text-white rounded-full shadow-md hover:bg-orange-600 transition"
+                    className="p-2 px-6 md:p-3 md:px-8 text-base md:text-lg font-medium bg-accent text-bg-primary rounded-full shadow-md hover:bg-orange-600 transition"
                 >
                     See More
                 </Link>
@@ -47,7 +47,7 @@ export default function Blog() {
                 {posts.map((item, index) => (
                     <div
                         key={index}
-                        className="group rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition duration-300 border border-gray-200"
+                        className="group rounded-xl overflow-hidden bg-bg-primary shadow-sm hover:shadow-md transition duration-300 border border-bg-secondary -200"
                     >
                         {/* Image */}
                         <div className="overflow-hidden">
@@ -62,10 +62,10 @@ export default function Blog() {
 
                         {/* Content */}
                         <div className="p-4 space-y-2">
-                            <h3 className="font-bold text-lg group-hover:text-orange-500 transition">
+                            <h3 className="text-text-primary font-bold text-lg group-hover:text-accent transition">
                                 {item.title}
                             </h3>
-                            <p className="line-clamp-3 text-sm text-gray-600">
+                            <p className="line-clamp-3 text-sm text-text-secondary">
                                 {item.description}
                             </p>
                         </div>

@@ -43,7 +43,7 @@ export default function BlogPage() {
         {blogPosts.map((item, index) => (
           <div
             key={index}
-            className="group shadow-md border border-gray-200 rounded-xl overflow-hidden bg-white hover:shadow-xl transition duration-300 flex flex-col"
+            className="group shadow-md border border-text-secondary/50 rounded-xl overflow-hidden bg-bg-primary hover:shadow-xl transition duration-300 flex flex-col"
           >
             {/* تصویر */}
             <div className="overflow-hidden">
@@ -57,16 +57,16 @@ export default function BlogPage() {
             </div>
 
             {/* متن */}
-            <div className="p-5 flex flex-col justify-between flex-1">
-              <h3 className="font-bold text-lg mb-2 group-hover:text-orange-500 transition">
+            <div className="p-3 flex flex-col justify-between flex-1">
+              <h3 className="text-text-primary font-bold text-lg mb-2 group-hover:text-accent transition">
                 {item.title}
               </h3>
-              <p className="line-clamp-3 text-gray-600 text-sm mb-4">
+              <p className="line-clamp-3 text-text-secondary text-sm mb-4">
                 {item.description}
               </p>
               <Link
                 href={`/blog/${index + 1}`}
-                className="text-orange-500 font-semibold hover:underline mt-auto inline-flex items-center gap-1"
+                className="text-accent font-semibold hover:underline mt-auto inline-flex items-center gap-1"
               >
                 Read More →
               </Link>

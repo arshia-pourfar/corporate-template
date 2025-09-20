@@ -152,7 +152,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                                 },
                             },
                             color: {
-                                value: particleColor || "#ffffff", // Particle color (default: white)
+                                value: particleColor || "#ffffff", // Particle color (default: bg-primary)
                                 animation: {
                                     h: {
                                         count: 0,
@@ -460,7 +460,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 />
             ) : (
                 // SUGGESTION: Add a fallback or loading state
-                <div className="text-center text-gray-500">Loading particles...</div>
+                <div className="text-center text-text-secondary">Loading particles...</div>
             )}
         </motion.div>
     );

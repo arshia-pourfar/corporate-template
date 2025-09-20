@@ -13,7 +13,7 @@ export default function Button({ text, size = "medium", link }: ButtonProps) {
         large: "px-10 py-4 text-lg",
     };
 
-    const buttonClass = `font-medium bg-orange-500 text-white rounded-full ${sizeClasses[size]}`;
+    const buttonClass = `font-medium bg-accent text-bg-primary rounded-full ${sizeClasses[size]}`;
 
     return link ? (
         <Link href={link} className={`inline-block ${buttonClass}`}>

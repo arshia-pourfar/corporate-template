@@ -29,7 +29,7 @@ export const Card = React.memo(
             onMouseEnter={() => setHovered(index)} // Set hovered card index on mouse enter
             onMouseLeave={() => setHovered(null)} // Reset hovered card index on mouse leave
             className={cn(
-                "rounded-md relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-40 md:h-60 lg:h-96 w-full transition-all duration-300 ease-out cursor-pointer", // Responsive height adjustments
+                "rounded-md relative bg-bg-secondary overflow-hidden h-40 md:h-60 lg:h-96 w-full transition-all duration-300 ease-out cursor-pointer mt-5", // Responsive height adjustments
                 hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
             )}
         >
@@ -44,8 +44,8 @@ export const Card = React.memo(
             {/* Dark gradient overlay from bottom to top */}
             <div
                 className={cn(
-                    "absolute inset-0 bg-gradient-to-t from-black/80 to-transparent",
-                    hovered !== null && hovered !== index && "from-black/55"
+                    "absolute inset-0 bg-gradient-to-t from-text-primary to-transparent",
+                    hovered !== null && hovered !== index && "from-text-primary/90"
                 )}
             ></div>
 
@@ -56,9 +56,9 @@ export const Card = React.memo(
                     hovered === index ? "translate-y-0" : "translate-y-6"
                 )}
             >
-                <div className="text-lg md:text-xl lg:text-2xl font-medium text-white flex flex-col">
+                <div className="text-lg md:text-xl lg:text-2xl font-medium text-bg-primary flex flex-col">
                     {card.title}
-                    <span className="text-sm md:text-base font-extralight underline text-orange-500">
+                    <span className="text-sm md:text-base font-extralight underline text-accent">
                         learn more
                     </span>
                 </div>
@@ -74,7 +74,7 @@ export function FocusCards({ cards }: { cards: CardType[] }) {
     const [hovered, setHovered] = useState<number | null>(null);
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 w-full my-8 capitalize">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6 w-full capitalize">
             {cards.map((card, index) => (
                 <Card
                     key={card.title}

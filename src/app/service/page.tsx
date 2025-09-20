@@ -25,7 +25,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <main className="bg-gray-50 rounded-md min-h-screen">
+    <main className="bg-bg-secondary rounded-md min-h-screen">
       {/* Hero Section */}
       <section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden rounded-md">
         <Image
@@ -34,9 +34,9 @@ export default function ServicesPage() {
           fill
           className="object-cover rounded-md"
         />
-        <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-white text-4xl md:text-6xl font-extrabold mb-4">Our Services</h1>
-          <p className="text-white/90 text-lg md:text-2xl max-w-2xl">
+        <div className="absolute inset-0 bg-text-primary/50 flex flex-col justify-center items-center text-center px-4">
+          <h1 className="text-bg-primary text-4xl md:text-6xl font-extrabold mb-4">Our Services</h1>
+          <p className="text-bg-primary/90 text-lg md:text-2xl max-w-2xl">
             Discover the range of services we offer to help your business grow and succeed.
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function ServicesPage() {
         {services.map((service) => (
           <div
             key={service.title}
-            className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center p-6"
+            className="bg-bg-primary rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center p-6"
           >
             <div className="w-40 h-40 mb-4 relative">
               <Image
@@ -57,8 +57,8 @@ export default function ServicesPage() {
                 className="rounded-xl object-cover hover:scale-105 transition-transform duration-300 "
               />
             </div>
-            <h3 className="text-orange-600 font-bold text-xl mb-2">{service.title}</h3>
-            <p className="text-gray-700 text-base">{service.description}</p>
+            <h3 className="text-accent font-bold text-xl mb-2">{service.title}</h3>
+            <p className="text-text-secondary text-base">{service.description}</p>
           </div>
         ))}
       </section>
