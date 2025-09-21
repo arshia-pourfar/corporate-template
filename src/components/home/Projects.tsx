@@ -3,7 +3,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards, Navigation } from 'swiper/modules';
-import { Compare } from "@/components/shared/compare";
+import { Compare } from "@/components/ui/compare";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 

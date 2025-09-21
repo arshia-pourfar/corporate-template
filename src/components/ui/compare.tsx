@@ -3,7 +3,7 @@
 "use client"; // Marks this component as a Client Component in Next.js
 
 import React, { useState, useEffect, useRef, useCallback } from "react"; // React hooks for state, effects, and refs
-import { SparklesCore } from "@/components/shared/sparkles"; // Custom Sparkles effect component
+import { SparklesCore } from "@/components/ui/sparkles"; // Custom Sparkles effect component
 import { AnimatePresence, motion } from "framer-motion"; // Animation library for React
 import { cn } from "@/lib/utils"; // Utility function for conditional class names
 import { IconDotsVertical } from "@tabler/icons-react"; // Vertical dots icon from Tabler Icons
